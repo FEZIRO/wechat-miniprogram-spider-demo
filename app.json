@@ -1,0 +1,14 @@
+{
+	"pages": [
+		"pages/news/news",
+		"pages/news_content/news_content"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#024827",
+		"navigationBarTitleText": "中大新华校讯",
+		"navigationBarTextStyle": "white"
+	},
+	"cloud": true,
+	"sitemapLocation": "sitemap.json"
+}

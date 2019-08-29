@@ -1,0 +1,56 @@
+<import src="../../template/news-item.wxml" />
+<!--主页-->
+<view class="scroll-container">
+    <view wx:if='{{loaded==false}}'></view>
+    <view wx:else>
+        <!--轮播图-->
+        <swiper class="banner-container" indicator-dots="true" autoplay="true" circular="true">
+            <swiper-item wx:for="{{bannerImgUrl}}" wx:key="{{bannerImgUrl}}">
+                <image src="{{item}}" class="banner-img" bindtap='previewImage' data-src="{{item}}"></image>
+            </swiper-item>
+        </swiper>
+
+        <!--横向tab-->
+        <scroll-view class="horizon-nav  {{navFixed ? 'nav-fixed' : ' ' }}" scroll-x='true' scroll-left="0" scroll-with-animation='true' scroll-left='0'>
+            <block wx:for="{{navItems}}" wx:key="index">
+                <view class="nav-item {{currentNav == index ? 'active' : ' '}}" data-currentnav="{{index}}" bindtap='switchNav'>{{item.text}}</view>
+            </block>
+        </scroll-view>
+
+        <!--新闻items-->
+        <!--新华要闻-->
+        <view id="xinHuaYaoWen" hidden="{{currentNav != 0}}">
+            <block wx:for="{{mainNewsItems}}" wx:key='{{mainNewsItems}}'>
+                <template is="normalItems" data="{{item}}"></template>
+            </block>
+        </view>
+
+        <!--教务公告-->
+        <view id="jiaoWuGongGao" hidden="{{currentNav != 1}}">
+            <block wx:for="{{affairsAnnouncementItems}}" wx:key='{{affairsAnnouncementItems}}'>
+                <template is="announcementItems" data="{{item}}"></template>
+            </block>
+        </view>
+
+        <!--活动预告-->
+        <view id="huoDongYuGao" hidden="{{currentNav != 2}}">
+            <block wx:for="{{upcomingActivityNewsItems}}" wx:key='{{upcomingActivityNewsItems}}'>
+                <template is="normalItems" data="{{item}}"></template>
+            </block>
+        </view>
+
+        <!--社团风采-->
+        <view id="sheTuanFengCai" hidden="{{currentNav != 3}}">
+            <block wx:for="{{schoolClubNewsItems}}" wx:key='{{schoolClubNewsItems}}'>
+                <template is="normalItems" data="{{item}}"></template>
+            </block>
+        </view>
+
+        <!--国际交流-->
+        <view id="guoJiJiaoLiu" hidden="{{currentNav != 4}}">
+            <block wx:for="{{intNewsItems}}" wx:key='{{intNewsItems}}'>
+                <template is="normalItems" data="{{item}}"></template>
+            </block>
+        </view>
+    </view>
+</view>

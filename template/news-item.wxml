@@ -1,0 +1,19 @@
+<template name="normalItems">
+	<view class="news-item" data-news-url="{{item.thisNewsUrl}}" data-title="{{item.title}}" data-time="{{item.time}}"  catchtap="openNewsContent" >
+		<image src="{{item.imgPreviewUrl}}" class="news-img"></image>
+		<view class="title-time-comment">
+			<text class="news-title F-SiYuanHei-Bold">{{item.title}}</text>
+			<view class="time-comment F-Product-Sans">
+				<text class="news-time ">{{item.time}}</text>
+				<text class="news-comment ">{{comment}}</text>
+			</view>
+		</view>
+	</view>
+</template>
+
+<template name="announcementItems">
+	<view class="announcement-item" data-news-url="{{item.thisNewsUrl}}" data-title="{{item.title}}" data-time="{{item.time}}"  catchtap="openAnnouncementContent" >
+		<text class="title F-SiYuanHei-Bold">{{item.title}}</text>
+		<text class="time F-Product-Sans">{{item.time}}</text>
+	</view>
+</template>

@@ -1,0 +1,25 @@
+<!--pages/news_content/news_content.wxml-->
+<view wx:if='{{loaded==false}}'></view>
+<view wx:else>
+	<view class='new-header'>
+		<text class="title">{{title}}</text>
+		<text class="time">{{time}}</text>
+	</view>
+	<view class='article' hidden="{{contentTarget != 'normal'}}">
+		<block wx:for='{{article.articles}}'>
+			<text class='article-text F-SiYuanHei-Normal'  space="emsp">  {{item}}</text>
+		</block>
+		<block wx:for='{{article.pictures.src}}' >
+			<image src='{{item}}' mode='aspectFit' class='article-picture' bindtap='previewImage' data-src='{{item}}'></image>
+			<text class='picture-hint'>{{article.pictures.hint[index]}}</text>
+		</block>
+		<rich-text class='article-footer' nodes='{{article.footer}}'></rich-text>
+	</view>
+	<view class='article' hidden="{{contentTarget != 'announcement'}}">
+		<rich-text nodes='{{article}}'></rich-text>
+	</view>
+	<view class="weui-footer">
+				<view class="weui-footer__text">Copyright © 2013 Xinhua College of Sun Yat-sen University All Rights Reserved</view>
+			</view>
+</view>
+

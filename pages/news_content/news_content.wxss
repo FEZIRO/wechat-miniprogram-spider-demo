@@ -1,0 +1,68 @@
+@import '../../style/weui.wxss';
+
+.new-header {
+	width: auto;
+	height: auto;
+	margin: 30rpx;
+}
+
+.title {
+	width: inherit;
+	display: block;
+	font-size: 50rpx;
+	font-weight: bold;
+	text-align: center;
+	font-family: 'SiYuanHei-Bold'
+}
+
+.time {
+	margin-top: 20rpx;
+	font-size:30rpx ;
+	display: block;
+	text-align: center;
+	font-family: 'Google ProductSans';
+}
+
+.article{
+	width: auto;
+	height: auto;
+	margin: 46rpx;
+}
+
+.article-text{
+	display: block;
+	width: inherit;
+	height: auto;
+	font-size: 40rpx;
+	margin-bottom: 30rpx;
+	color: #424242;
+}
+
+
+.article-picture{
+	display: block;
+	width: inherit;
+	height: 400rpx;
+}
+
+.picture-hint{
+	display: block;
+	width: inherit;
+	font-size: 20rpx;
+	margin-bottom: 40rpx;
+	text-align: center;
+	font-family: 'SiYuanHei-Bold'
+}
+
+.article-footer{
+	display: block;
+	width: inherit;
+	font-size: 25rpx;
+	margin-bottom: 40rpx;
+	text-align: center;
+	font-family: 'SiYuanHei-Bold'
+}
+
+
+
+
