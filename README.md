@@ -18,3 +18,5 @@
 3、在云函数文件夹下创建云函数，在当前云函数初始化npm包管理工具，并下载cheerio和axios库，上传部署云函数。  
 4、编写云函数过程：先使用axios爬取目标网站整体结构，再使用cheerio加载结构，通过使用cheerio提供的api完成爬虫数据分析，并返回小程序端。  
 5、小程序请求过程：使用 `wx.cloud.callFunction()` 接口发起云函数请求即可。
+<br>
+code by FEZIRO
